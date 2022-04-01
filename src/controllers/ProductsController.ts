@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes';
 import ProductsModel from '../models/ProductsModel';
 
 export default class ProductsController {
-  public ProductsModel: ProductsModel;
+  private ProductsModel: ProductsModel;
 
   constructor() {
     this.ProductsModel = new ProductsModel();
