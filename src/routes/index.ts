@@ -1,2 +1,2 @@
 export { default as productsRouter } from './productsRouter';
-export const batata = 'BATATA';
+export { default as ordersRouter } from './ordersRouter';
