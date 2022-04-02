@@ -20,6 +20,12 @@ export default class ProductsController {
 
     const insertData = await this.ProductsModel.createProduct({ name, amount });
 
-    return res.status(StatusCodes.CREATED).json(insertData);
+    const response = {
+      item: {
+        ...insertData,
+      },
+    };
+
+    return res.status(StatusCodes.CREATED).json(response);
   };
 }
