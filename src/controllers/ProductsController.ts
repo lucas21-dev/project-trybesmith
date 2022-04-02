@@ -14,4 +14,12 @@ export default class ProductsController {
 
     return res.status(StatusCodes.OK).json(products);
   };
+
+  createProductsController = async (req: Request, res: Response): Promise<Response> => {
+    const { name, amount } = req.body;
+
+    const insertData = await this.ProductsModel.createProduct({ name, amount });
+
+    return res.status(StatusCodes.CREATED).json(insertData);
+  };
 }
